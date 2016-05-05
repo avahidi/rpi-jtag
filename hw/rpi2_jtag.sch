@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:rpi2_jtag-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -49,7 +48,7 @@ U 1 1 56F2CE49
 P 8650 1900
 F 0 "J20" H 8650 2450 50  0000 C CNN
 F 1 "CONN_02X10" V 8650 1900 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x10" H 8650 700 50  0001 C CNN
+F 2 "Connect:IDC_Header_Straight_20pins" H 8650 700 50  0001 C CNN
 F 3 "" H 8650 700 50  0000 C CNN
 	1    8650 1900
 	1    0    0    -1  
@@ -57,12 +56,12 @@ $EndComp
 $Comp
 L R R4
 U 1 1 56F2CF21
-P 8300 5300
-F 0 "R4" V 8380 5300 50  0000 C CNN
-F 1 "100" V 8300 5300 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 8230 5300 50  0001 C CNN
-F 3 "" H 8300 5300 50  0000 C CNN
-	1    8300 5300
+P 8400 4900
+F 0 "R4" V 8400 5100 50  0000 C CNN
+F 1 "470" V 8400 4900 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 8330 4900 50  0001 C CNN
+F 3 "" H 8400 4900 50  0000 C CNN
+	1    8400 4900
 	0    1    1    0   
 $EndComp
 Text GLabel 2600 1350 1    60   Input ~ 0
@@ -73,13 +72,13 @@ Text GLabel 2450 1350 1    60   Input ~ 0
 TDI
 Text GLabel 2250 1350 1    60   Input ~ 0
 TMS
-Text GLabel 2150 1350 1    60   Input ~ 0
+Text GLabel 2100 1350 1    60   Input ~ 0
 nTRST
-Text GLabel 4050 1300 1    60   Input ~ 0
+Text GLabel 4100 1350 1    60   Input ~ 0
 RTCK
-Text GLabel 4150 1300 1    60   Input ~ 0
+Text GLabel 4250 1300 1    60   Input ~ 0
 TDO
-Text GLabel 4350 1300 1    60   Input ~ 0
+Text GLabel 4400 1300 1    60   Input ~ 0
 TCK
 $Comp
 L CONN_02X13 PI2
@@ -94,8 +93,6 @@ F 3 "" H 3100 1000 50  0000 C CNN
 $EndComp
 Text GLabel 1950 1350 1    60   Input ~ 0
 GND
-Text GLabel 4250 1300 1    60   Input ~ 0
-GND
 Text GLabel 3650 1300 1    60   Input ~ 0
 TX0
 Text GLabel 3800 1300 1    60   Input ~ 0
@@ -103,29 +100,29 @@ RX0
 $Comp
 L CONN_01X03 UART1
 U 1 1 56F2D836
-P 8850 5200
-F 0 "UART1" H 8850 5400 50  0000 C CNN
-F 1 "CONN_01X03" V 8950 5200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 8850 5200 50  0001 C CNN
-F 3 "" H 8850 5200 50  0000 C CNN
-	1    8850 5200
+P 8950 4900
+F 0 "UART1" H 8950 5100 50  0000 C CNN
+F 1 "CONN_01X03" V 9050 4900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 8950 4900 50  0001 C CNN
+F 3 "" H 8950 4900 50  0000 C CNN
+	1    8950 4900
 	1    0    0    -1  
 $EndComp
-Text GLabel 8000 5100 0    60   Input ~ 0
+Text GLabel 8100 4800 0    60   Input ~ 0
 GND
-Text GLabel 8000 5200 0    60   Input ~ 0
+Text GLabel 8100 5000 0    60   Input ~ 0
 TX0
-Text GLabel 8000 5300 0    60   Input ~ 0
+Text GLabel 7500 4900 0    60   Input ~ 0
 RX0
 $Comp
 L R R3
 U 1 1 56F2D92F
-P 8300 5200
-F 0 "R3" V 8250 5350 50  0000 C CNN
-F 1 "470" V 8300 5200 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 8230 5200 50  0001 C CNN
-F 3 "" H 8300 5200 50  0000 C CNN
-	1    8300 5200
+P 8400 5000
+F 0 "R3" V 8500 5000 50  0000 C CNN
+F 1 "100" V 8400 5000 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 8330 5000 50  0001 C CNN
+F 3 "" H 8400 5000 50  0000 C CNN
+	1    8400 5000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -165,7 +162,7 @@ Text GLabel 1350 6050 0    60   Input ~ 0
 GND
 Text GLabel 1300 5200 0    60   Input ~ 0
 3v3
-Text GLabel 5650 5200 0    60   Input ~ 0
+Text GLabel 3800 5200 0    60   Input ~ 0
 JTAG_5v
 $Comp
 L LED DPI1
@@ -189,37 +186,37 @@ JTAG_5v
 $Comp
 L GND #PWR03
 U 1 1 56F2EB63
-P 4200 6200
-F 0 "#PWR03" H 4200 5950 50  0001 C CNN
-F 1 "GND" H 4200 6050 50  0000 C CNN
-F 2 "" H 4200 6200 50  0000 C CNN
-F 3 "" H 4200 6200 50  0000 C CNN
-	1    4200 6200
+P 5450 6250
+F 0 "#PWR03" H 5450 6000 50  0001 C CNN
+F 1 "GND" H 5450 6100 50  0000 C CNN
+F 2 "" H 5450 6250 50  0000 C CNN
+F 3 "" H 5450 6250 50  0000 C CNN
+	1    5450 6250
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
 U 1 1 56F2EB69
-P 4200 5950
-F 0 "R2" V 4280 5950 50  0000 C CNN
-F 1 "470" V 4200 5950 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 4130 5950 50  0001 C CNN
-F 3 "" H 4200 5950 50  0000 C CNN
-	1    4200 5950
+P 5450 6000
+F 0 "R2" V 5530 6000 50  0000 C CNN
+F 1 "470" V 5450 6000 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5380 6000 50  0001 C CNN
+F 3 "" H 5450 6000 50  0000 C CNN
+	1    5450 6000
 	-1   0    0    1   
 $EndComp
 $Comp
 L LED DJ1
 U 1 1 56F2EB70
-P 4200 5500
-F 0 "DJ1" H 4200 5600 50  0000 C CNN
-F 1 "LED" H 4200 5400 50  0000 C CNN
-F 2 "LEDs:LED_1206" H 4200 5500 50  0001 C CNN
-F 3 "" H 4200 5500 50  0000 C CNN
-	1    4200 5500
+P 5450 5550
+F 0 "DJ1" H 5450 5650 50  0000 C CNN
+F 1 "LED" H 5450 5450 50  0000 C CNN
+F 2 "LEDs:LED_1206" H 5450 5550 50  0001 C CNN
+F 3 "" H 5450 5550 50  0000 C CNN
+	1    5450 5550
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4400 5150 2    60   Input ~ 0
+Text GLabel 5650 5200 2    60   Input ~ 0
 JTAG_3v3
 Text GLabel 7650 1450 0    60   Input ~ 0
 3v3
@@ -262,23 +259,23 @@ $EndComp
 $Comp
 L PWR_FLAG #FLG06
 U 1 1 56F2FD0F
-P 3800 5150
-F 0 "#FLG06" H 3800 5245 50  0001 C CNN
-F 1 "PWR_FLAG" H 3800 5330 50  0000 C CNN
-F 2 "" H 3800 5150 50  0000 C CNN
-F 3 "" H 3800 5150 50  0000 C CNN
-	1    3800 5150
+P 5050 5200
+F 0 "#FLG06" H 5050 5295 50  0001 C CNN
+F 1 "PWR_FLAG" H 5050 5380 50  0000 C CNN
+F 2 "" H 5050 5200 50  0000 C CNN
+F 3 "" H 5050 5200 50  0000 C CNN
+	1    5050 5200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L PWR_FLAG #FLG07
 U 1 1 56F2FD50
-P 5800 4950
-F 0 "#FLG07" H 5800 5045 50  0001 C CNN
-F 1 "PWR_FLAG" H 5800 5130 50  0000 C CNN
-F 2 "" H 5800 4950 50  0000 C CNN
-F 3 "" H 5800 4950 50  0000 C CNN
-	1    5800 4950
+P 3950 4950
+F 0 "#FLG07" H 3950 5045 50  0001 C CNN
+F 1 "PWR_FLAG" H 3950 5130 50  0000 C CNN
+F 2 "" H 3950 4950 50  0000 C CNN
+F 3 "" H 3950 4950 50  0000 C CNN
+	1    3950 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -331,15 +328,13 @@ Wire Wire Line
 	2900 0    3150 0   
 Connection ~ 3000 0   
 Wire Wire Line
-	8650 5100 8000 5100
+	8750 4800 8100 4800
 Wire Wire Line
-	8450 5200 8650 5200
+	8550 4900 8750 4900
 Wire Wire Line
-	8650 5300 8450 5300
+	8750 5000 8550 5000
 Wire Wire Line
-	8150 5300 8000 5300
-Wire Wire Line
-	8000 5200 8150 5200
+	8100 5000 8250 5000
 Wire Wire Line
 	1700 5150 1700 5250
 Wire Wire Line
@@ -382,13 +377,13 @@ Wire Wire Line
 Wire Wire Line
 	7650 2350 8400 2350
 Wire Wire Line
-	4200 6100 4200 6200
+	5450 6150 5450 6250
 Wire Wire Line
-	4200 5700 4200 5800
+	5450 5750 5450 5850
 Wire Wire Line
-	3800 5150 4400 5150
+	5050 5200 5650 5200
 Wire Wire Line
-	4200 5150 4200 5300
+	5450 5200 5450 5350
 Wire Wire Line
 	7650 1450 8400 1450
 Wire Wire Line
@@ -412,12 +407,12 @@ Connection ~ 1700 6050
 Wire Wire Line
 	1450 5900 1450 6050
 Connection ~ 1450 6050
-Connection ~ 4200 5150
+Connection ~ 5450 5200
 Wire Wire Line
-	5650 5200 6150 5200
+	3800 5200 4300 5200
 Wire Wire Line
-	5800 4950 5800 5200
-Connection ~ 5800 5200
+	3950 4950 3950 5200
+Connection ~ 3950 5200
 Wire Wire Line
 	2800 5200 2800 4900
 Connection ~ 2800 5200
@@ -445,7 +440,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 2350 4450 2350
 Wire Wire Line
-	4450 2450 3350 2450
+	3350 2450 4450 2450
 Wire Wire Line
 	3350 2550 4450 2550
 Wire Wire Line
@@ -486,15 +481,7 @@ Wire Wire Line
 	3800 1300 3800 1950
 Connection ~ 3800 1950
 Connection ~ 3950 2150
-Wire Wire Line
-	4350 1300 4350 2550
-Connection ~ 4350 2550
-Wire Wire Line
-	4150 1300 4150 2350
-Connection ~ 4150 2350
-Wire Wire Line
-	4050 1300 4050 2250
-Connection ~ 4050 2250
+Connection ~ 4400 2550
 Wire Wire Line
 	2600 1350 2600 1550
 Connection ~ 2600 1550
@@ -506,22 +493,14 @@ Wire Wire Line
 	2250 1350 2250 2150
 Connection ~ 2250 2150
 Wire Wire Line
-	2150 1350 2150 2250
-Connection ~ 2150 2250
-Wire Wire Line
 	3400 1300 3400 1550
 Wire Wire Line
-	1950 1950 1950 1350
-Wire Wire Line
-	4250 1300 4250 1750
-Connection ~ 4250 1750
-Wire Wire Line
-	3950 2150 3950 1300
+	1950 1350 1950 2750
 Text Notes 1700 3600 0    157  ~ 0
 RPi user IO connector
-Text Notes 7000 3500 0    157  ~ 0
-20P JTAG  connector
-Text Notes 7300 6100 0    157  ~ 0
+Text Notes 6850 3600 0    157  ~ 0
+IDC-20P JTAG  connector
+Text Notes 7250 6250 0    157  ~ 0
 RPi2 UART  connector
 Text Notes 2600 6900 0    157  ~ 0
 Power indicators
@@ -557,4 +536,51 @@ Wire Notes Line
 	700  7100 700  4300
 Wire Notes Line
 	700  4300 6400 4300
+$Comp
+L R R5
+U 1 1 572C5707
+P 7650 5250
+F 0 "R5" V 7730 5250 50  0000 C CNN
+F 1 "1K" V 7650 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 7580 5250 50  0001 C CNN
+F 3 "" H 7650 5250 50  0000 C CNN
+	1    7650 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 572C5893
+P 7650 5550
+F 0 "#PWR010" H 7650 5300 50  0001 C CNN
+F 1 "GND" H 7650 5400 50  0000 C CNN
+F 2 "" H 7650 5550 50  0000 C CNN
+F 3 "" H 7650 5550 50  0000 C CNN
+	1    7650 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4900 8250 4900
+Wire Wire Line
+	7650 5100 7650 4900
+Connection ~ 7650 4900
+Wire Wire Line
+	7650 5400 7650 5550
+Text Notes 8000 5800 0    60   ~ 0
+the RX0 voltage divider is for the \n5v to 3.3v conversion. the TX0 resistor \nprotectes Pi TX to TX connections
+Connection ~ 1950 2750
+Wire Wire Line
+	3950 1300 3950 2450
+Connection ~ 3950 1750
+Connection ~ 3950 2450
+Wire Wire Line
+	4250 1300 4250 2350
+Connection ~ 4250 2350
+Wire Wire Line
+	4400 1300 4400 2550
+Wire Wire Line
+	4100 1350 4100 2250
+Connection ~ 4100 2250
+Wire Wire Line
+	2100 1350 2100 2250
+Connection ~ 2100 2250
 $EndSCHEMATC
