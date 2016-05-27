@@ -8,7 +8,13 @@ RPi-JTAG
 
 Raspberry Pi IO header to JTAG IDC-20P connector, plus optional UART connectors and power indicators.
 
-Note that you need to first enable RPi JTAG mode (I use my minipi_ bootloader to do this).
+Note that JTAG pins are shared with GPIO, which you will need to re-configure in order to enable JTAG.
+I use my minipi_ bootloader to do this, which gives me access to JTAG early in the boot.
+But you can also do this manually from the u-boot prompt::
+
+    mw.l 0x3F200000 0x00002000
+    mw.l 0x3F200008 0x0061B0C0
+
 
 license
 -------
